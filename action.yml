@@ -54,6 +54,11 @@ inputs:
     required: false
     default: "false"
 
+  per-page:
+    description: >-
+      How many package versions to fetch. Defaults to 100.
+    required: false
+
 runs:
   using: node20
   main: dist/index.js
