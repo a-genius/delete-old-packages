@@ -1,4 +1,4 @@
-import { getBooleanInput, getInput, getMultilineInput } from "@actions/core"
+import { getBooleanInput, getInput, getMultilineInput, info } from "@actions/core"
 import { Range } from "semver"
 import { Input, PackageType } from "./types.js"
 
@@ -9,7 +9,10 @@ function getRegExpInput(name: string): RegExp | undefined {
 
   if (input !== "") {
     try {
-      return new RegExp(input)
+      const re = new RegExp(input)
+      info("Using regex")
+      info(re.source)
+      return re
     } catch (error) {
       throw new Error(`${name} must be a valid regex`, { cause: error })
     }

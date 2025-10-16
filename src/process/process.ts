@@ -1,3 +1,4 @@
+import { info } from "@actions/core"
 import { coerce as semverCoerce, satisfies as semverSatisfies } from "semver"
 import { Input, Package, PackageType, PackageVersion } from "../types.js"
 import { OctokitPackageResponse, OctokitPackageVersion } from "../types/octokit.js"
