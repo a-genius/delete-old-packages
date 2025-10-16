@@ -15,6 +15,7 @@ test("filters correctly", () => {
       user: "user",
       organization: "",
       type: PackageType.Npm,
+      perPage: 100
     },
     [
       {
@@ -56,6 +57,7 @@ test("filters based on semver", () => {
       user: "user",
       organization: "",
       type: PackageType.Npm,
+      perPage: 100
     },
     [
       {
@@ -87,6 +89,7 @@ test("filters based on regex", () => {
       user: "user",
       organization: "",
       type: PackageType.Npm,
+      perPage: 100
     },
     [
       {
@@ -128,6 +131,7 @@ test("respects keep", () => {
       user: "user",
       organization: "",
       type: PackageType.Npm,
+      perPage: 100
     },
     [
       {
@@ -167,6 +171,7 @@ test("filters with multiple names", () => {
       user: "user",
       organization: "",
       type: PackageType.Npm,
+      perPage: 100
     },
     [
       {

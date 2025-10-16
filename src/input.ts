@@ -3,6 +3,7 @@ import { Range } from "semver"
 import { Input, PackageType } from "./types.js"
 
 const DEFAULT_KEEP = 2
+const DEFAULT_PER_PAGE = 100
 
 function getRegExpInput(name: string): RegExp | undefined {
   const input = getInput("version-pattern")
@@ -62,6 +63,7 @@ export function getActionInput(): Input {
     dryRun: getBooleanInput("dry-run"),
     user: getInput("user"),
     organization: getInput("organization"),
+    perPage: Number(getInput("per-page") || DEFAULT_PER_PAGE),
   }
 }
 
@@ -84,6 +86,10 @@ export function validateInput(input: Input): Input {
 
   if (!Number.isInteger(input.keep) || input.keep < 0 || input.keep > 100) {
     throw new Error("keep must be an integer between 0 and 100 (inclusive)")
+  }
+
+  if (!Number.isInteger(input.perPage) || input.perPage < 0 || input.perPage > 1000) {
+    throw new Error("keep must be an integer between 0 and 1000 (inclusive)")
   }
 
   if (input.token === "") {

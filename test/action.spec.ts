@@ -32,6 +32,7 @@ test("queries and deletes packages", async () => {
     user: "user",
     organization: "",
     type: PackageType.Npm,
+    perPage: 100
   }
 
   const queryStrategy = mock<QueryStrategy>({ queryPackages: () => Promise.resolve(packages) })
@@ -54,6 +55,7 @@ test("filters by semver-pattern", async () => {
     user: "user",
     organization: "",
     type: PackageType.Npm,
+    perPage: 100
   }
 
   const queryStrategy = mock<QueryStrategy>({ queryPackages: () => Promise.resolve(packages) })
@@ -75,6 +77,7 @@ test("filters by version-pattern", async () => {
     user: "user",
     organization: "",
     type: PackageType.Npm,
+    perPage: 100
   }
 
   const queryStrategy = mock<QueryStrategy>({ queryPackages: () => Promise.resolve(packages) })
@@ -96,6 +99,7 @@ test("deletes whole package if last version", async () => {
     user: "user",
     organization: "",
     type: PackageType.Npm,
+    perPage: 100
   }
 
   const queryStrategy = mock<QueryStrategy>({ queryPackages: () => Promise.resolve(packages_single) })
@@ -117,6 +121,7 @@ test("Does nothing when empty packages are returned", async () => {
     user: "user",
     organization: "",
     type: PackageType.Npm,
+    perPage: 100
   }
 
   const queryStrategy = mock<QueryStrategy>({ queryPackages: () => Promise.resolve([]) })

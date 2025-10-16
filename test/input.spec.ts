@@ -36,6 +36,7 @@ describe("getActionInput", () => {
       user: "user",
       organization: "",
       type: PackageType.Npm,
+      perPage: 100
     }
 
     expect(result).toEqual(expected)
@@ -63,6 +64,7 @@ describe("getActionInput", () => {
       user: "user",
       organization: "",
       type: PackageType.Npm,
+      perPage: 100
     }
 
     expect(result).toEqual(expected)
@@ -88,6 +90,7 @@ describe("getActionInput", () => {
       dryRun: true,
       user: "user",
       organization: "",
+      perPage: 100
     }
 
     expect(result).toEqual(expected)
@@ -169,6 +172,7 @@ describe("validateInput", () => {
       dryRun: true,
       user: "user",
       organization: "",
+      perPage: 100
     }
 
     expect(() => {
@@ -185,6 +189,7 @@ describe("validateInput", () => {
       user: "user",
       organization: "",
       type: PackageType.Npm,
+      perPage: 100
     }
 
     expect(() => {
@@ -203,6 +208,7 @@ describe("validateInput", () => {
       user: "user",
       organization: "",
       type: PackageType.Npm,
+      perPage: 100
     }
 
     expect(() => {
@@ -219,6 +225,7 @@ describe("validateInput", () => {
       dryRun: true,
       user: "user",
       organization: "org",
+      perPage: 100
     }
 
     expect(() => {
@@ -235,6 +242,7 @@ describe("validateInput", () => {
       user: "user",
       organization: "",
       type: PackageType.Npm,
+      perPage: 100
     }
 
     expect(() => {
@@ -251,6 +259,7 @@ describe("validateInput", () => {
       user: "user",
       organization: "",
       type: PackageType.Npm,
+      perPage: 100
     }
 
     expect(() => {
@@ -267,6 +276,7 @@ describe("validateInput", () => {
       user: "user",
       organization: "",
       type: PackageType.Npm,
+      perPage: 100
     }
 
     expect(() => {
@@ -283,6 +293,7 @@ describe("validateInput", () => {
       user: "user",
       organization: "",
       type: PackageType.Npm,
+      perPage: 100
     }
 
     expect(() => {

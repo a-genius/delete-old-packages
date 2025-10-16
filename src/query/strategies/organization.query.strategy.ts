@@ -21,7 +21,7 @@ export default class OrganizationQueryStrategy implements QueryStrategy {
         package_name: name,
         package_type: input.type,
         org: input.organization,
-        per_page: 100,
+        per_page: input.perPage,
       }
 
       return await this.octokit.rest.packages.getAllPackageVersionsForPackageOwnedByOrg(params)

@@ -19,6 +19,7 @@ export type Input = {
   dryRun: boolean
   user: string
   organization: string
+  perPage: number
 }
 
 export type Package = {
